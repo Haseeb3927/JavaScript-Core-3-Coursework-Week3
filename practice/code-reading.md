@@ -16,6 +16,11 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+ANSWER:
+Console.log(x) inside the function will print 2 because value of x = 2 is local to this function.
+Console.log(x) outside will print 1 because that's the value of global variable x.
+Result : 1
+
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +39,14 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+ANSWER:
+Because X is global variable then we can access to it.
+console.log(f1()) will Output: 10
+But Y is a local variable inside the function.
+console.log(y) will Output: undefined.
+
+Result: 10 , undefined
 
 ## Question 3
 
@@ -62,3 +75,8 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+ANSWER:
+Object Values are selected by Object manipulation which adds 1 to the value of Y.
+So,
+Result : 10

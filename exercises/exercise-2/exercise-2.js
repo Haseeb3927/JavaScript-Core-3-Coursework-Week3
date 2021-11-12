@@ -70,3 +70,33 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//====function to get Names Of Gryffindor House Residents====//
+
+function getNamesOfGryffindorHouse(array) {
+  let NamesOfGryffindorHouse = [];
+  array.filter((object) => {
+    let { firstName, lastName, house } = object; // Object destruction
+
+    if (house === "Gryffindor") {
+      return NamesOfGryffindorHouse.push(`${firstName} ${lastName}`);
+    }
+  });
+  return NamesOfGryffindorHouse;
+}
+//console.log(getNamesOfGryffindorHouse(hogwarts));
+
+//====Get Teacher Pet Owners====//
+
+function getNamesOfPetOwners(array) {
+  let NamesOfPetOwners = [];
+  array.filter((object) => {
+    let { firstName, lastName, house, pet, occupation } = object; // Object destruction
+
+    if (pet != null && occupation === "Teacher") {
+      return NamesOfPetOwners.push(`${firstName} ${lastName}`);
+    }
+  });
+  return NamesOfPetOwners;
+}
+//console.log(getNamesOfPetOwners(hogwarts));
